@@ -1,0 +1,64 @@
+{% extends "index.html" %}
+{% block title %}<title>Patient Entry Form</title>{% endblock title %}
+{% block information %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+    {% endwith %}
+
+
+
+<form method="POST" action="">
+    {{ form.hidden_tag() }}
+    <fieldset class="form-group">
+        <legend class="border-bottom"><strong>Submit patient information</strong></legend>
+        <div class="form-group">
+            {{ form.name.label(class = "form-control-label") }}
+            {{ form.name(class = "form-control form-control-sm") }}
+        </div>
+        <div class="form-group">
+            {{ form.age.label(class = "form-control-label") }}
+            {{ form.age(class = "form-control form-control-sm") }}
+        </div>
+        <div class="form-group">
+            {{ form.gender.label(class = "form-control-label") }}
+            {{ form.gender(class = "form-control form-control-sm") }}
+        </div>
+        <div class="form-group">
+            {{ form.blood_type.label(class = "form-control-label") }}
+            {{ form.blood_type(class = "form-control form-control-sm") }}
+        </div>
+        <div class="form-group">
+            {{ form.injury_type.label(class = "form-control-label") }}
+            {{ form.injury_type(class = "form-control form-control-sm") }}
+        </div>
+        <div class="form-group">
+            {{ form.injury_location.label(class = "form-control-label") }}
+            {{ form.injury_location(class = "form-control form-control-sm") }}
+        </div>
+        <div class="form-group">
+            {{ form.injury_cause.label(class = "form-control-label") }}
+            {{ form.injury_cause(class = "form-control form-control-sm") }}
+        </div>
+        <div class="form-group">
+            {{ form.heart_rate.label(class = "form-control-label") }}
+            {{ form.heart_rate(class = "form-control form-control-sm") }}
+        </div>
+        <div class="form-group">
+            {{ form.o2_level.label(class = "form-control-label") }}
+            {{ form.o2_level(class = "form-control form-control-sm") }}
+        </div>
+        
+    </fieldset>
+    <div class="form-group">
+        {{ form.submit_button(class="btn btn-danger") }}
+    </div>
+</form>
+<strong><em>Note. Information cannot be edited after submission</strong></em>
+
+{% endblock information %}
