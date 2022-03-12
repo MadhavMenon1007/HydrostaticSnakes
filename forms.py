@@ -19,12 +19,12 @@ class LoginForm(FlaskForm):
 class PatientEntry(FlaskForm): 
     name = StringField("Patient Name", validators = [DataRequired()])  
     age = IntegerField("Patient Age", validators = [DataRequired()])
-    blood_type = StringField("Blood Type", validators = [DataRequired()])
+    blood_type = StringField("Blood Type", validators = [DataRequired(), Length(max=3)])
     injury_type = StringField("Type of injury", validators = [DataRequired()])
     injury_location = StringField("Location of injury", validators = [DataRequired()])
     injury_cause = StringField("Cause of injury", validators = [DataRequired()])
     heart_rate = IntegerField("Heart rate", validators = [DataRequired()])
     o2_level = FloatField("Oxygen level", validators = [DataRequired()])
-    
+    submit_button = SubmitField("Submit Patient")
 
 
