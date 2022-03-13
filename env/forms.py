@@ -19,7 +19,7 @@ from wtforms.validators import Length, Email, DataRequired, EqualTo # Validators
 class PatientEntry(FlaskForm): 
     name = StringField("Patient Name", validators = [DataRequired()])  
     age = IntegerField("Patient Age", validators = [DataRequired()])
-    gender = StringField("Patient Gender", validators = [DataRequired()])
+    patient_sex = StringField("Patient Medical Sex", validators = [DataRequired()])
     blood_type = StringField("Blood Type", validators = [DataRequired(), Length(max=3)])
     injury_type = StringField("Type of injury", validators = [DataRequired()])
     injury_location = StringField("Location of injury", validators = [DataRequired()])
