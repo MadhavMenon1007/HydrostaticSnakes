@@ -9,3 +9,5 @@ of the patient. This would help hospitals properly prepare for the entering pati
 Over 1.3m people are injured every year because of unprepared hospitals and wrongful treatment and the implementation of our product would be an effective solution to this issue,
 and could potentially save **hundreds of lives**. This software is intended to be used and customized by hospitals, who will be able to use the security key measure implemented to prevent
 spam, and customize the front-end to their liking. The software is **user-friendly** and **completely open-source**.
+
+******Made for the NeevHackathon by Team Hydrostatic Snakes******
