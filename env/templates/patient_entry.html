@@ -13,9 +13,9 @@
 
 
 
-<form method="POST" action="">
+<form method="POST" action="/submit">
     {{ form.hidden_tag() }}
-    <fieldset class="form-group">
+    <fieldset class="form-group ">
         <legend class="border-bottom"><strong>Submit patient information</strong></legend>
         <div class="form-group">
             {{ form.name.label(class = "form-control-label") }}
@@ -52,6 +52,14 @@
         <div class="form-group">
             {{ form.o2_level.label(class = "form-control-label") }}
             {{ form.o2_level(class = "form-control form-control-sm") }}
+        </div>
+        <div class="form-group">
+            {{ form.attenders_code.label(class = "form-control-label") }}
+            {{ form.attenders_code(class = "form-control form-control-sm") }}
+        </div>
+        <div class="form-group">
+            {{ form.ambulance_licenceplate.label(class = "form-control-label") }}
+            {{ form.ambulance_licenceplate(class = "form-control form-control-sm") }}
         </div>
         
     </fieldset>

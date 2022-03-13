@@ -26,6 +26,8 @@ class PatientEntry(FlaskForm):
     injury_cause = StringField("Cause of injury", validators = [DataRequired()])
     heart_rate = IntegerField("Heart rate", validators = [DataRequired()])
     o2_level = FloatField("Oxygen level", validators = [DataRequired()])
+    attenders_code = StringField("First Attender's code", validators = [DataRequired(), Length(min = 2, max=20)])
+    ambulance_licenceplate = StringField("Ambulance's Licence plate", validators = [DataRequired()])
     submit_button = SubmitField("Submit Patient")
 
 
